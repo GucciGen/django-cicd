@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Django CI/CD{% endblock %}</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; background: #f4f6f8; color: #1f2933; }
+    header { background: #0c4b33; color: #fff; padding: 16px 32px; }
+    nav a { color: #fff; margin-right: 20px; text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 760px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 10px; }
+    footer { text-align: center; color: #7b8794; padding: 20px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{% url 'home' %}">Головна</a>
+      <a href="{% url 'about' %}">Про проєкт</a>
+      <a href="{% url 'contact' %}">Контакти</a>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>Зібрано GitHub Actions і запущено в Docker</footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "pages/base.html" %}
+{% block title %}Про проєкт{% endblock %}
+{% block content %}
+  <h1>Про проєкт</h1>
+  <p>Технології, які використано:</p>
+  <ul>
+    {% for tech in technologies %}
+      <li>{{ tech }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
